@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Feeds</h1>
+  {% for post in posts %}
+    <div>
+      <h2>{{ post.author.username }}</h2>
+      <img src="{{ post.image.url }}" alt="Post Image">
+      <p>{{ post.caption }}</p>
+      <p>{{ post.created_at }}</p>
+      <a href="{% url 'posts:post_detail' post.pk %}">View Detail</a>
+    </div>
+  {% empty %}
+    <p>작성된 피드가 없습니다.</p>
+  {% endfor %}
+{% endblock %}

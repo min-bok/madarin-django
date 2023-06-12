@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="login-main">
+    <h1 class="login-logo">
+        <img src="{% static 'assets/symbol-logo-W.png' %}" alt="">
+    </h1>
+</main>
+<section>
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div id="login" class="login-div">
+            {{ form.as_p }}
+            <button class="l-button" type="submit">로그인</button>
+        </div>
+       
+    </form>
+    <div class="login-join-cont">
+        <button onclick="location.href=`{% url 'market:market_register' %}`">회원가입</button>
+    </div>
+</section>
+{% endblock %}
