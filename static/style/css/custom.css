@@ -613,6 +613,62 @@ form p label {
   text-decoration: none;
 }
 
+/* register */
+.register-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 30px 0 40px;
+  text-align: center;
+}
+
+.register-main {
+  margin: 0 auto;
+}
+
+.register-form {
+  padding: 50px 0 82px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: var(--sub-txt-color);
+  padding: 0 34px;
+  padding-top: 50px;
+}
+
+.register-form ul {
+  align-self: flex-start;
+  padding-left: 0;
+}
+
+.register-form input[type="password"]:focus {
+  outline: none;
+}
+
+.register-form input[type="password"] {
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1rem;
+  padding: 8px 0;
+  box-sizing: content-box;
+}
+
+.register-form input[type="password"]:focus {
+  outline: none;
+  border-bottom: 1px solid var(--main-color);
+}
+/* 
+.register-form input:focus {
+  outline: none;
+} */
+
+.register-form .l-button {
+  width: 100%;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: var(--main-color);
+  border-radius: 44px;
+}
+
 /* 버튼 컴포넌트 스타일 */
 button {
   border: none;

@@ -1,13 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
-<div style="padding-left: 50px; padding-top: 50px">
-    <!-- commit test: 추후 수정 예정입니다 -->
-    <h1>Login</h1>
-    <hr />
-    <form method="post" action="{% url 'login' %}">
-        {%csrf_token%}
-        <input type="hidden" name="next" value="" />
-        {{ form.as_p }}
-        <button class="btn btn-primary" type="submit">로그인</button>
+  <main class="register-main">
+    <h1 class="register-title">이메일로 회원가입</h1>
+    <form class="register-form" method="post" action="{% url 'login' %}">
+      {%csrf_token%}
+      <input type="hidden" name="next" value="" />
+      {{ form.as_p }}
+      <button class="l-button" type="submit">다음</button>
     </form>
-</div>
+  </main>
 {% endblock %}
