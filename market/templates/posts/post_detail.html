@@ -1,11 +1,37 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Post Detail</h1>
+  <header class="header">
+    <section class="top-bar upload-top-bar">
+      <h1 class="ir">게시글 작성 페이지</h1>
+      <button type="button" class="back-button">
+        <span class="ir">돌아가기 버튼</span>
+      </button>
+      <button type="button" class="more-button">
+        <span class="ir">더보기 버튼</span>
+      </button>
+    </section>
+  </header>
+  <main class="main detail-main" class="post-detail-wrap">
+    <img src="http://146.56.183.55:5050/Ellipse.png" alt="test222님의 프로필사진" class="user-profile-img">
+    <div class="post-detail-wrap">
+      <h2>애월읍 위니브 감귤 농장</h2>
+      <p>옷을 인생을 그러므로 없으면 것은 이상은 것은 우리의 위하여, 뿐이다. 이상의 청춘의 뼈 따뜻한 그들의 그와 약동하다. 대고, 못할 넣는 풍부하게 뛰노는 인생의 힘있다.</p>
+      <div class="post-detail-img-wrap">
+        <img src="../static/assets/post-img-example.png" alt="포스트 이미지">
+        <img src="../static/assets/post-img-example.png" alt="포스트 이미지">
+        <img src="../static/assets/post-img-example.png" alt="포스트 이미지">
+      </div> 
+      <p class="post-detail-date">2020년 10월 21일</p>
+    </div>
+  </main>
+{% endblock %}
+
+{% comment %} 처음에 있던 마크업 {% endcomment %}
+  {% comment %} <h1>Post Detail</h1>
   <div>
     <h2>{{ post.author.username }}</h2>
     <img src="{{ post.image.url }}" alt="Post Image">
     <p>{{ post.caption }}</p>
     <p>{{ post.created_at }}</p>
-  </div>
-{% endblock %}
+  </div> {% endcomment %}
