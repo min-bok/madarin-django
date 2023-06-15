@@ -44,6 +44,7 @@ html {
   font-size: 14px;
   color: #333;
   height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -928,6 +929,12 @@ button {
     height: 100%;
     background-color: #FFF;
     margin-top: 48px;
+    margin-left: 16px;
+}
+
+.upload-main {
+    display: flex;
+    padding: 20px 0 20px 16px;
 }
 
 .upload-main .user-profile-img {
@@ -938,6 +945,11 @@ button {
     border: 0.5px solid var(--border-color);
 }
 
+.post-write {
+  padding-left: 16px;
+  margin-right: 16px;
+}
+
 .upload-main .post-write {
     position: relative;
     min-width: 300px;
@@ -945,6 +957,13 @@ button {
     padding-right: 16px;
     overflow-y: scroll;
     box-sizing: border-box;
+    padding-bottom: 30px;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+
+.upload-main .post-write::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
 .upload-main form {
@@ -981,7 +1000,6 @@ form p label[for="id_image"]{
 
 form p label[for="id_caption"] {
   display: none;
-
 }
 
 .upload-photo-list .photo-list {
@@ -989,6 +1007,12 @@ form p label[for="id_caption"] {
     gap: 8px;
     overflow-x: scroll;
     padding-left: 0px;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+
+.upload-photo-list .photo-list::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
 .upload-main {
@@ -999,7 +1023,8 @@ form p label[for="id_caption"] {
 form p textarea {
     outline: none;
     resize: none;
-    border: 1px solid var(--border-color);
+    border: none;
+    /* border: 1px solid var(--border-color); */
 }
 
 .upload-photo-list li {
@@ -1027,4 +1052,15 @@ form p textarea {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.errorlist {
+  position: absolute;
+  bottom: 0;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  z-index: 100;
+  color: #eb5757;
+  padding: 0;
 }
