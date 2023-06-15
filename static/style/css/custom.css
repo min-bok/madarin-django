@@ -316,7 +316,7 @@ ul.posts > li.post img[alt]:after {
 /*# sourceMappingURL=style.css.map */
 
 /* top-bar 스타일 */
-.top-bar {
+/* .top-bar {
   position: relative;
   display: flex;
   align-items: center;
@@ -388,7 +388,7 @@ ul.posts > li.post img[alt]:after {
 
 .top-bar.upload-top-bar {
   justify-content: space-between;
-}
+} */
 
 /* nav-bar 스타일 */
 .nav-bar {
@@ -873,4 +873,158 @@ button {
   font-size: 12px;
   line-height: 15px;
   color: var(--main-color);
+}
+
+/* post_create */
+.upload-header {
+  min-width: 100%;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* min-width: 390px; */
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.top-bar.upload-top-bar {
+  justify-content: space-between;
+}
+
+.top-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border-bottom: 0.5px solid var(--border-color);
+}
+
+.ir,
+#id_image {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.top-bar .back-button {
+  width: 22px;
+  height: 22px;
+  background: url("../../assets/icon/icon-arrow-left.png") no-repeat center /
+    22px 22px;
+  cursor: pointer;
+}
+
+.main {
+    min-width: 390px;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    margin-top: 48px;
+}
+
+.upload-main .user-profile-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 12px;
+    border: 0.5px solid var(--border-color);
+}
+
+.upload-main .post-write {
+    position: relative;
+    min-width: 300px;
+    width: 100%;
+    padding-right: 16px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+.upload-main form {
+    width: 100%;
+    padding-top: 12px;
+}
+
+.upload-main .post-txt-input {
+    width: 100%;
+    margin-bottom: 16px;
+    font-family: "Spoqa Han Sans Neo", "sans-serif";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    border: none;
+    outline: none;
+    padding: 0;
+    resize: none;
+}
+
+form p label[for="id_image"]{
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    background-image: url("../../assets/upload-file.png");
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 100;
+    color: transparent;
+}
+
+form p label[for="id_caption"] {
+  display: none;
+
+}
+
+.upload-photo-list .photo-list {
+    display: flex;
+    gap: 8px;
+    overflow-x: scroll;
+    padding-left: 0px;
+}
+
+.upload-main {
+    display: flex;
+    padding: 20px 0 20px 16px;
+} 
+
+form p textarea {
+    outline: none;
+    resize: none;
+    border: 1px solid var(--border-color);
+}
+
+.upload-photo-list li {
+    position: relative;
+    border-radius: 10px;
+    width: 304px;
+    height: 228px;
+    overflow: hidden;
+    border: 0.5px solid var(--border-color);
+}
+
+.upload-photo-list img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upload-photo-list .img-remove {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    height: 22px;
+    width: 22px;
+    background-image: url("../../assets/icon/icon-remove-btn.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }

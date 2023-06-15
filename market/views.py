@@ -21,7 +21,8 @@ class PostDetailView(LoginRequiredMixin, DetailView):
     context_object_name = 'post'
 
 
-class PostCreateView(LoginRequiredMixin, CreateView):
+# class PostCreateView(LoginRequiredMixin, CreateView):
+class PostCreateView(CreateView):
     model = Post
     template_name = 'posts/post_create.html'
     fields = ['image', 'caption']

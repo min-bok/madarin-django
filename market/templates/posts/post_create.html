@@ -1,10 +1,42 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Create Post</h1>
+  {% comment %} <h1>Create Post</h1>
   <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Create</button>
-  </form>
+  </form> {% endcomment %}
+  <form method="POST" enctype="multipart/form-data" class="post-form" autocomplete="off">
+  {%csrf_token %}
+<header class="header upload-header">
+    <section class="top-bar upload-top-bar">
+    <h1 class="ir">게시글 작성 페이지</h1>
+    <button type="button" class="back-button">
+      <span class="ir">돌아가기 버튼</span>
+    </button>
+     <button type="submit" class="init-button ms-button disabled-button upload-btn">업로드</button> 
+  </section>
+</header>
+<main class="main upload-main">
+  <h2 class="ir">게시글 작성</h2>
+  <img src="http://146.56.183.55:5050/Ellipse.png" alt="test222님의 프로필사진" class="user-profile-img">
+  <article class="post-write">
+    <h3 class="ir">게시글 작성 form</h3>
+    {{ form.as_p }}
+    <section class="upload-photo-list">
+      <h4 class="ir">추가된 사진</h4>
+      <ul class="photo-list">
+        <li>
+          <img src="../../static/assets/post-img-example.png" alt="">
+          <button type="button" class="img-remove">
+            <span class="ir">이미지 삭제</span>
+          </button>
+        </li>
+      </ul>
+    </section>
+  </article>
+</main>
+</form>
+
 {% endblock %}
