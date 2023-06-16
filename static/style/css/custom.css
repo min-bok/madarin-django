@@ -657,10 +657,6 @@ form p label {
   outline: none;
   border-bottom: 1px solid var(--main-color);
 }
-/* 
-.register-form input:focus {
-  outline: none;
-} */
 
 .register-form .l-button {
   width: 100%;
@@ -1105,4 +1101,115 @@ form p textarea {
     display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
+/* post list */
+.top-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border-bottom: 0.5px solid var(--border-color);
+}
 
+.top-bar .main-heading {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.top-bar .search-button {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  background: url(/static/assets/icon/icon-search.png) no-repeat center / 24px
+    24px;
+  transform: translateY(-50%);
+}
+
+.main-cont {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: url(/static/assets/symbol-logo-gray.png) center 160px no-repeat;
+}
+
+.main-cont .main-text {
+  color: var(--sub-txt-color);
+  margin: 25px 0 20px;
+}
+
+.main-cont .l-button {
+  width: 120px;
+  background-color: var(--main-color);
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+}
+
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  max-width: 100%;
+  /* width: 100%; */
+  padding: 0 6px;
+  border-top: 0.5px solid var(--border-color);
+}
+
+.nav-bar .menu-list {
+  display: flex;
+  gap: 14px;
+  /* gap: 10%; */
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar .menu-list li {
+  width: 84px;
+  padding: 12px 0 6px;
+  text-align: center;
+}
+
+.nav-bar .menu-list a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #767676;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.nav-bar .menu-list li.current-menu a {
+  color: var(--main-color);
+}
+
+.nav-bar .menu-list a::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 4px;
+}
+
+
+.nav-bar a {
+  text-decoration: none;
+}
+
+.nav-bar .menu-chat a::before {
+  background-image: url(/static/assets/icon/icon-message-circle.png);
+}

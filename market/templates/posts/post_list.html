@@ -1,6 +1,47 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<header class="top-bar main-top-bar">
+  <h1 class="main-heading">감귤마켓 피드</h1>
+  <button class="search-button">
+    <img src="../../static/assets/icon/icon-search.png" alt="계정 검색하기">
+  </button>
+</header>
+{% for post in posts %}
+    <div>
+      <h2>{{ post.author.username }}</h2>
+      <img src="{{ post.image.url }}" alt="Post Image">
+      <p>{{ post.caption }}</p>
+      <p>{{ post.created_at }}</p>
+      <a href="{% url 'posts:post_detail' post.pk %}">View Detail</a>
+    </div>
+  {% empty %}
+    <main class="main-cont">
+      <p class="main-text">유저를 검색해 팔로우 해보세요!</p>
+      <button class="l-button">검색하기</button>
+    </main>
+  {% endfor %}
+  <nav class="nav-bar">
+    <ul class="menu-list">
+      <!-- 현재 메뉴인 경우 current-menu 클래스 추가 -->
+      <li class="menu-home current-menu">
+        <a href="#">홈</a>
+      </li>
+      <li class="menu-chat">
+        <a href="#">채팅</a>
+      </li>
+      <li class="menu-post">
+        <a href="#">게시물 작성</a>
+      </li>
+      <li class="menu-profile">
+        <a href="#">프로필</a>
+      </li>
+    </ul>
+  </nav>
+{% endblock %}
+
+{% comment %} 기존 마크업 {% endcomment %}
+{% comment %} 
   <h1>Feeds</h1>
   {% for post in posts %}
     <div>
@@ -13,4 +54,4 @@
   {% empty %}
     <p>작성된 피드가 없습니다.</p>
   {% endfor %}
-{% endblock %}
+{% endcomment %}
