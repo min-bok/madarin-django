@@ -445,6 +445,10 @@ ul.posts > li.post img[alt]:after {
   background-image: url("/static/assets/icon/icon-home.png");
 }
 
+.nav-bar .menu-chat a::before {
+  background-image: url("/static/assets/icon/icon-message-circle.png");
+}
+
 .nav-bar .menu-post a::before {
   background-image: url("/static/assets/icon/icon-edit.png");
 }
@@ -1208,8 +1212,4 @@ form p textarea {
 
 .nav-bar a {
   text-decoration: none;
-}
-
-.nav-bar .menu-chat a::before {
-  background-image: url(/static/assets/icon/icon-message-circle.png);
 }
