@@ -8,12 +8,17 @@
   </button>
 </header>
 {% for post in posts %}
-    <div>
+    <div class="post-detail-wrap">
       <h2>{{ post.author.username }}</h2>
-      <img src="{{ post.image.url }}" alt="Post Image">
-      <p>{{ post.caption }}</p>
-      <p>{{ post.created_at }}</p>
-      <a href="{% url 'posts:post_detail' post.pk %}">View Detail</a>
+      <a href="{% url 'posts:post_detail' post.pk %}">
+        <p>{{ post.caption }}</p>
+        <div class="post-detail-img-wrap">
+          <img src="{{ post.image.url }}" alt="포스트 이미지">
+          <img src="{{ post.image.url }}" alt="포스트 이미지">
+          <img src="{{ post.image.url }}" alt="포스트 이미지">
+        </div> 
+      </a>
+      <p class="post-detail-date">{{ post.created_at }}</p>
     </div>
   {% empty %}
     <main class="main-cont">
@@ -40,7 +45,7 @@
   </nav>
 {% endblock %}
 
-{% comment %} 기존 마크업 {% endcomment %}
+{# 기존 마크업 #}
 {% comment %} 
   <h1>Feeds</h1>
   {% for post in posts %}
