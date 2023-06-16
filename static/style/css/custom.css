@@ -1137,17 +1137,16 @@ form p textarea {
 .main-cont {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  margin: 0 auto;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  background: url(/static/assets/symbol-logo-gray.png) center 160px no-repeat;
+  width: 300px;
+  height: calc(100% - 61px);
+  margin: 0 auto;
 }
 
 .main-cont .main-text {
   color: var(--sub-txt-color);
-  margin: 25px 0 20px;
+  margin: 20px 0;
 }
 
 .main-cont .l-button {
@@ -1162,15 +1161,14 @@ form p textarea {
   position: fixed;
   bottom: 0;
   max-width: 100%;
-  /* width: 100%; */
   padding: 0 6px;
   border-top: 0.5px solid var(--border-color);
+  background-color: #fff;
 }
 
 .nav-bar .menu-list {
   display: flex;
   gap: 14px;
-  /* gap: 10%; */
   align-items: center;
   justify-content: space-evenly;
   padding: 0;
@@ -1208,7 +1206,6 @@ form p textarea {
   background-repeat: no-repeat;
   margin-bottom: 4px;
 }
-
 
 .nav-bar a {
   text-decoration: none;
