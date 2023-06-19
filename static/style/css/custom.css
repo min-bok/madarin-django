@@ -1129,7 +1129,7 @@ form p textarea {
   right: 16px;
   width: 24px;
   height: 24px;
-  background: url(/static/assets/icon/icon-search.png) no-repeat center / 24px
+  background: url("/static/assets/icon/icon-search.png") no-repeat center / 24px
     24px;
   transform: translateY(-50%);
 }
@@ -1142,6 +1142,20 @@ form p textarea {
   width: 300px;
   height: calc(100% - 61px);
   margin: 0 auto;
+}
+
+.main-cont::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-cont::before {
+  background-image: url("/static/assets/symbol-logo-gray.png");
 }
 
 .main-cont .main-text {
