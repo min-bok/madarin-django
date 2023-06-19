@@ -561,10 +561,10 @@ ul.posts > li.post img[alt]:after {
 }
 
 form {
+  position: relative;
   display: flex;
   width: 100%;
   flex-direction: column;
-  align-items: center;
 }
 
 form p {
@@ -598,6 +598,7 @@ form p label {
   color: #ffffff;
   background-color: var(--main-color);
   margin-bottom: 1%;
+  margin-top: 3%;
 }
 
 .login-main-container .l-button::before {
@@ -616,6 +617,24 @@ form p label {
   line-height: 15px;
   color: var(--sub-txt-color);
   text-decoration: none;
+}
+
+form p:nth-of-type(1) {
+  order: 1;
+}
+
+form p:nth-of-type(2) {
+  order: 2;
+}
+
+form ul:nth-of-type(1) {
+  font-size: 0.6rem;
+  order: 3;
+  margin: 0;
+}
+
+form button:nth-of-type(1) {
+  order: 4;
 }
 
 /* register */
@@ -1051,10 +1070,10 @@ form p textarea {
 }
 
 .errorlist {
-  position: absolute;
-  bottom: 0;
-  background-position: center;
-  background-size: cover;
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* background-position: center; */
+  /* background-size: cover; */
   cursor: pointer;
   z-index: 100;
   color: #eb5757;
